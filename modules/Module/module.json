@@ -3,10 +3,10 @@
     "description" : "",
 
     "providers" : [
-        "Modules\\Module\\PermissionsModuleProvider::class"
+        "Modules\\Module\\ModuleServiceProvider::class"
     ],
 
-    "aliases" : [
-        "name"
-    ]
+    "aliases" : {
+        "Test" : "\\Namespace\\Test::class"
+    }
 }
