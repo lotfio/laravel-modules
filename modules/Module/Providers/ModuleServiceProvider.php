@@ -37,8 +37,14 @@ class ModuleServiceProvider extends ServiceProvider
         // load view
         $this->loadViewsFrom($modulePth   .'resources/views', 'module');
 
+        // load miggrations
         $this->loadMigrationsFrom($modulePth . 'Database/migrations');
 
+        // load factories 
         $this->loadFactoriesFrom($modulePth . 'Database/factories');
+
+        // load seeders
+
+        // load commands
     }
 }
