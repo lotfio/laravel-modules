@@ -1,0 +1,12 @@
+{
+    "name" : "module",
+    "description" : "",
+
+    "providers" : [
+        "Modules\\Module\\PermissionsModuleProvider::class"
+    ],
+
+    "aliases" : [
+        "name"
+    ]
+}
