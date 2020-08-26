@@ -75,3 +75,49 @@ if(!function_exists('load_module_middleware'))
         }
     }
 }
+
+if(!function_exists('modules_commands'))
+{
+    /**
+     * load module commands
+     *
+     * @return void
+     */
+    function modules_commands()
+    {
+        $modules_path   = base_path('modules');
+        $modules        = scan_directory($modules_path);
+
+        $commands = [];
+
+        foreach($modules as $module)
+        {
+            $commands[] = $modules_path .'/'. $module . '/Console/Commands';
+        }
+
+        return $commands;
+    }
+}
+
+if(!function_exists('modules_commands_definitions'))
+{
+    /**
+     * load module definitions
+     *
+     * @return void
+     */
+    function modules_commands_definitions()
+    {
+        $modules_path   = base_path('modules');
+        $modules        = scan_directory($modules_path);
+
+        $commands = [];
+
+        foreach($modules as $module)
+        {
+            $commands[] = $modules_path .'/'. $module . '/routes/console.php';
+        }
+
+        return $commands;
+    }
+}
